@@ -1,0 +1,13 @@
+project_name: "SAG-Clinical-Llama"
+backbone: "meta-llama/Llama-3-8B"
+marl_settings:
+  learning_rate: 1e-5
+  role_switch_frequency: 10
+  gamma: 0.99
+protocol_settings:
+  max_pec_rounds: 3
+  coordinator_threshold: 0.85
+reward_weights:
+  w_accuracy: 1.0
+  w_safety: 2.5 
+  w_fairness: 1.5
