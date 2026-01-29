@@ -4,11 +4,15 @@
 
 ---
 
-## 🔬 Project Overview
+## Project Overview
 
-This repository provides the official implementation of **Small Agent Groups (SAGs)**, a novel collaborative intelligence framework designed to break the "Impossible Triangle" in digital health (Effectiveness vs. Reliability vs. Deployability). 
+The rapid adoption of large language models (LLMs) in digital health has been driven by a ''scaling-first'' philosophy, i.e., the assumption that clinical intelligence increases with model size and data. However, real-world clinical needs include not only effectiveness, but also reliability and reasonable deployment cost. Since clinical decision-making is inherently collaborative, we challenge the monolithic scaling paradigm and ask whether a Small Agent Group (SAG) can support better clinical reasoning. SAG shifts from single-model intelligence to collective expertise by distributing reasoning, evidence-based analysis, and critical audit through an collaborative deliberation process. To assess the clinical utility of SAG, we conduct extensive evaluations using diverse clinical metrics spanning effectiveness, reliability, and deployment cost. Our results show that SAG achieves superior performance compared to a single giant model, both with and without additional optimization or retrieval-augmented generation. These findings suggest that the synergistic reasoning represented by SAG can substitute for model parameter growth in clinical settings. Overall, SAG offers a scalable solution to digital health that better balances effectiveness, reliability, and deployment efficiency.
 
-By substituting monolithic scaling with a structured, role-specialized collaboration protocol (**$P_{EC}$**), we demonstrate that groups of lightweight models (e.g., 3B) can outperform monolithic giants (e.g., 70B) in complex clinical reasoning tasks while maintaining a hardware-friendly footprint.
+---
+
+## System Architecture
+
+![SAG](figures/sag.png)
 
 ---
 ## Key Results
@@ -41,7 +45,7 @@ SAG-Clinical-Reasoning/
 
 ---
 
-## 📊 Comprehensive Benchmarks
+## Comprehensive Benchmarks
 
 We evaluate our framework across a structured hierarchy of clinical and reasoning-intensive workloads:
 
@@ -57,7 +61,7 @@ We evaluate our framework across a structured hierarchy of clinical and reasonin
 
 ---
 
-## 🤖 Models & Backbones
+## Models & Backbones
 
 Our framework is evaluated using a diverse set of foundation and domain-specific models. All models are initialized from the following open-weight checkpoints available on Hugging Face:
 
@@ -70,7 +74,7 @@ Our framework is evaluated using a diverse set of foundation and domain-specific
 
 ---
 
-## 🛠️ Usage & Reproducibility
+## Usage & Reproducibility
 
 ### 1. Installation
 ```bash
